@@ -1,6 +1,14 @@
 {
   "name": "vangware.com",
+  "description": "Vangware's Website",
   "version": "1.0.0",
+  "author": {
+    "name": "Vangware",
+    "url": "https://vangware.com"
+  },
+  "bugs": {
+    "url": "https://github.com/vangware/vangware.com/issues"
+  },
   "devDependencies": {
     "@types/prettier": "^1.19.0",
     "@types/stylelint": "^9.10.1",
@@ -23,9 +31,15 @@
     "stylelint-prettier": "^1.1.1",
     "workbox": "^0.0.0"
   },
+  "homepage": "https://vangware.com",
   "keywords": [],
   "license": "ISC",
   "main": "index.js",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vangware/vangware.com.git"
+  },
   "scripts": {
     "start": "live-server",
     "sw": "workbox generateSW workbox-config.js"
