@@ -1,0 +1,160 @@
+@keyframes fade-from-right {
+	from {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0%);
+	}
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+:root {
+	--color-brand: #20b075;
+	--color-background: #ddd;
+	--color-foreground: #333;
+	--color-link-background: var(--color-brand);
+	--color-link-foreground: var(--color-background);
+	--color-selection-background: var(--color-brand);
+	--color-selection-foreground: #fff;
+}
+
+::selection {
+	background-color: var(--color-selection-background);
+	color: var(--color-selection-foreground);
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+}
+
+body {
+	align-items: center;
+	background-color: var(--color-background);
+	color: var(--color-foreground);
+	display: flex;
+	flex-direction: column;
+	font-family: monospace;
+	font-size: 24px;
+	justify-content: center;
+	margin: 0;
+	opacity: 1;
+	padding: 0;
+	text-align: center;
+}
+
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+	width: 100%;
+}
+
+svg {
+	height: 10vw;
+	margin-bottom: 2rem;
+	max-width: 920px;
+	width: 80vw;
+}
+
+svg path {
+	fill: none;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-width: 2;
+}
+
+svg path:nth-child(1) {
+	animation: fade-from-right 0.5s ease-out both;
+	stroke: var(--color-brand);
+	will-change: opacity, transform;
+}
+
+svg path:nth-child(2) {
+	animation: fade-in 0.5s ease-out both;
+	animation-delay: 0.4s;
+	stroke: var(--color-foreground);
+	will-change: opacity;
+}
+
+nav {
+	align-items: center;
+	animation: fade-in 0.5s ease-out both;
+	animation-delay: 0.8s;
+	display: flex;
+	font-size: 100%;
+	justify-content: space-around;
+	margin: 0 auto;
+	max-width: 800px;
+	will-change: opacity;
+}
+
+a {
+	background-color: var(--color-link-background);
+	border-radius: 1.5rem;
+	color: var(--color-link-foreground);
+	font-weight: 700;
+	padding: 0.2rem 1rem;
+	text-decoration: none;
+	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+	will-change: background-color, color;
+}
+
+a:not(:hover):not(:focus) {
+	--color-link-background: var(--color-background);
+	--color-link-foreground: var(--color-foreground);
+}
+
+a .only-print:before {
+	content: "-";
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-background: #333;
+		--color-foreground: #ddd;
+	}
+}
+
+@media (max-width: 640px) {
+	nav {
+		flex-direction: column;
+	}
+	a {
+		margin: 0.5rem 0;
+	}
+}
+
+@media screen {
+	.only-print {
+		display: none;
+	}
+}
+
+@media print {
+	:root {
+		--color-brand: #000;
+		--color-background: #fff;
+		--color-foreground: #000;
+	}
+	body {
+		display: block;
+		text-align: left;
+	}
+	a {
+		display: block;
+		margin: 1rem 0 !important;
+	}
+}

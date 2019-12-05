@@ -1,0 +1,32 @@
+{
+  "cSpell.words": [
+    "Vangstyle",
+    "Vangware",
+    "camelcase",
+    "editorconfig",
+    "eqeqeq",
+    "eslintconfig",
+    "iife",
+    "linebreak",
+    "plusplus",
+    "pnpm",
+    "pnpx",
+    "prettierignore",
+    "singleline",
+    "stylelint",
+    "stylelintrc",
+    "tslib"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "eslint.autoFixOnSave": true,
+  "editor.formatOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.enable": true
+}
