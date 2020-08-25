@@ -1,5 +1,5 @@
 {
-  "background_color": "#20b075",
+  "background_color": "#22bb77",
   "description": "Vangware official site",
   "display": "minimal-ui",
   "icons": [
@@ -12,11 +12,17 @@
       "sizes": "512x512",
       "src": "/images/512.png",
       "type": "image/png"
+    },
+    {
+      "sizes": "512x512",
+      "src": "/images/512.maskable.png",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "name": "Vangware - Where vanguard meets quality",
   "orientation": "any",
   "short_name": "Vangware",
   "start_url": "/",
-  "theme_color": "#20b075"
+  "theme_color": "#22bb77"
 }

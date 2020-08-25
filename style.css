@@ -1,160 +1,132 @@
-@keyframes fade-from-right {
-	from {
-		opacity: 0;
-		transform: translateX(100%);
-	}
-	to {
-		opacity: 1;
-		transform: translateX(0%);
-	}
-}
-
-@keyframes fade-in {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
 :root {
-	--color-brand: #20b075;
-	--color-background: #ddd;
-	--color-foreground: #333;
-	--color-link-background: var(--color-brand);
-	--color-link-foreground: var(--color-background);
-	--color-selection-background: var(--color-brand);
-	--color-selection-foreground: #fff;
+	--color-brand: #2b7;
+	--color-brand-secondary: #177;
+	--color-background: #fff;
+	--color-foreground: #000;
+	--color-link: var(--color-background);
+	--color-logo: var(--color-background);
+	--color-logo-shadow: var(--color-foreground);
 }
 
-::selection {
-	background-color: var(--color-selection-background);
-	color: var(--color-selection-foreground);
-}
-
-* {
-	box-sizing: border-box;
-	margin: 0;
-	outline: 0;
-	padding: 0;
+html {
+	font-size: 2vw;
 }
 
 body {
+	font-family: monospace;
+	margin: 0;
+}
+
+main {
 	align-items: center;
-	background-color: var(--color-background);
-	color: var(--color-foreground);
+	background-color: var(--color-brand);
+	background-image: linear-gradient(
+		var(--color-brand),
+		var(--color-brand-secondary)
+	);
 	display: flex;
 	flex-direction: column;
-	font-family: monospace;
-	font-size: 24px;
+	height: 100vh;
 	justify-content: center;
-	margin: 0;
-	opacity: 1;
-	padding: 0;
 	text-align: center;
-}
-
-html,
-body {
-	height: 100%;
-	overflow: hidden;
 	width: 100%;
 }
 
 svg {
 	height: 10vw;
 	margin-bottom: 2rem;
-	max-width: 920px;
 	width: 80vw;
-}
-
-svg path {
-	fill: none;
-	stroke-linecap: round;
-	stroke-linejoin: round;
-	stroke-width: 2;
-}
-
-svg path:nth-child(1) {
-	animation: fade-from-right 0.5s ease-out both;
-	stroke: var(--color-brand);
-	will-change: opacity, transform;
-}
-
-svg path:nth-child(2) {
-	animation: fade-in 0.5s ease-out both;
-	animation-delay: 0.4s;
-	stroke: var(--color-foreground);
-	will-change: opacity;
 }
 
 nav {
 	align-items: center;
-	animation: fade-in 0.5s ease-out both;
 	animation-delay: 0.8s;
 	display: flex;
 	font-size: 100%;
 	justify-content: space-around;
 	margin: 0 auto;
-	max-width: 800px;
-	will-change: opacity;
 }
 
-a {
-	background-color: var(--color-link-background);
+nav a {
 	border-radius: 1.5rem;
-	color: var(--color-link-foreground);
+	color: var(--color-link);
 	font-weight: 700;
-	padding: 0.2rem 1rem;
+	margin: 0.2rem 1rem;
 	text-decoration: none;
-	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-	will-change: background-color, color;
 }
 
-a:not(:hover):not(:focus) {
-	--color-link-background: var(--color-background);
-	--color-link-foreground: var(--color-foreground);
+nav a:hover,
+nav a:focus {
+	outline: none;
+	text-decoration: underline;
 }
 
-a .only-print:before {
-	content: "-";
+aside {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	width: 100%;
+}
+
+aside a {
+	outline: none;
+	overflow: hidden;
+}
+
+aside a img {
+	transform: scale3d(1, 1, 1);
+	transition: transform 0.2s ease-in-out;
+	will-change: transform;
+}
+
+aside a:focus img,
+aside a:hover img {
+	transform: scale3d(1.1, 1.1, 1.1);
+}
+
+aside img {
+	vertical-align: bottom;
+	width: 100%;
+}
+
+#logo {
+	stroke: var(--color-logo);
+}
+
+#shadow {
+	stroke: var(--color-logo-shadow);
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--color-background: #333;
-		--color-foreground: #ddd;
+		--color-brand: #222;
+		--color-brand-secondary: #000;
+		--color-logo: #2b7;
+	}
+	aside a img {
+		filter: grayscale(1);
+		transform: scale3d(1, 1, 1);
+		transition: filter 0.2s ease-in-out, transform 0.2s ease-in-out;
+		will-change: filter, transform;
+	}
+
+	aside a:focus img,
+	aside a:hover img {
+		filter: grayscale(0);
+		transform: scale3d(1.1, 1.1, 1.1);
 	}
 }
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
+	aside {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+	}
 	nav {
 		flex-direction: column;
 	}
-	a {
-		margin: 0.5rem 0;
-	}
-}
-
-@media screen {
-	.only-print {
-		display: none;
-	}
-}
-
-@media print {
-	:root {
-		--color-brand: #000;
-		--color-background: #fff;
-		--color-foreground: #000;
-	}
-	body {
-		display: block;
-		text-align: left;
-	}
-	a {
-		display: block;
-		margin: 1rem 0 !important;
+	nav a {
+		font-size: 2.5rem;
+		margin: 2rem 0;
 	}
 }

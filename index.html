@@ -30,7 +30,7 @@
 		<meta property="og:title" content="Vangware" />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://vangware.com/" />
-		<meta name="theme-color" content="#20b075" />
+		<meta name="theme-color" content="#22bb77" />
 
 		<!-- Others -->
 		<link rel="apple-touch-icon" href="/images/thumb.png" />
@@ -43,11 +43,37 @@
 	</head>
 	<body>
 		<main>
-			<svg viewBox="0 0 64 8" title="Vangware">
-				<path d="M1 1v6l6-6" />
-				<path
-					d="M14 7V1l6 6V1m12 0v6l3-3v3l3-3V1M11 7V1L5 7h3m37 0V1l-6 6h3m21 0h-6V1h6M48 7V1h6v3h-3l3 3M29 1h-6v6h6V4h-3M60 4h3"
-				/>
+			<svg viewBox="0 0 72 12">
+				<defs>
+					<filter
+						id="blur"
+						x="-200%"
+						y="-200%"
+						width="400%"
+						height="400%"
+						filterUnits="objectBoundingBox"
+						color-interpolation-filters="sRGB"
+					>
+						<feGaussianBlur stdDeviation=".9" />
+					</filter>
+				</defs>
+				<g
+					fill="none"
+					stroke-width="2"
+					stroke-linejoin="round"
+					stroke-linecap="round"
+				>
+					<path
+						id="shadow"
+						filter="url(#blur)"
+						d="M5 3v6l6-6m7 6V3l6 6V3m12 0v6l3-3v3l3-3V3M15 9V3L9 9h3m37 0V3l-6 6h3m21 0h-6V3h6M52 9V3h6v3h-3l3 3M33 3h-6v6h6V6h-3m34 0h3"
+						stroke-opacity=".5"
+					/>
+					<path
+						id="logo"
+						d="M5 3v6l6-6m7 6V3l6 6V3m12 0v6l3-3v3l3-3V3M15 9V3L9 9h3m37 0V3l-6 6h3m21 0h-6V3h6M52 9V3h6v3h-3l3 3M33 3h-6v6h6V6h-3m34 0h3"
+					/>
+				</g>
 			</svg>
 			<nav>
 				<a
@@ -56,9 +82,6 @@
 					href="//github.com/vangware"
 				>
 					GitHub
-					<span aria-hidden="true" class="only-print">
-						https://github.com/vangware
-					</span>
 				</a>
 				<a
 					rel="noopener noreferrer"
@@ -66,9 +89,6 @@
 					href="//twitter.com/vangware"
 				>
 					Twitter
-					<span aria-hidden="true" class="only-print">
-						https://twitter.com/vangware
-					</span>
 				</a>
 				<a
 					rel="noopener noreferrer"
@@ -76,9 +96,6 @@
 					href="//facebook.com/vangware"
 				>
 					Facebook
-					<span aria-hidden="true" class="only-print">
-						https://facebook.com/vangware
-					</span>
 				</a>
 				<a
 					rel="noopener noreferrer"
@@ -86,11 +103,48 @@
 					href="//linkedin.com/company/vangware"
 				>
 					LinkedIn
-					<span aria-hidden="true" class="only-print">
-						https://linkedin.com/company/vangware
-					</span>
 				</a>
 			</nav>
 		</main>
+		<aside>
+			<a href="https://npm.im/@vangware/base">
+				<img
+					src="https://repository-images.githubusercontent.com/274250962/91b95780-e64b-11ea-946a-9bf18310c701"
+					alt="Base by Vangware"
+				/>
+			</a>
+			<a href="https://npm.im/@vangware/test">
+				<img
+					src="https://repository-images.githubusercontent.com/280551512/92f08180-e657-11ea-9b36-1f87d181c6d8"
+					alt="Test by Vangware"
+				/>
+			</a>
+			<a href="https://npm.im/@vangware/utils">
+				<img
+					src="https://repository-images.githubusercontent.com/274261923/d64af000-e657-11ea-9831-c17a20dab6b5"
+					alt="Utils by Vangware"
+				/>
+			</a>
+			<a href="https://npm.im/@vangware/cron">
+				<img
+					src="https://repository-images.githubusercontent.com/283760667/ec58b080-e657-11ea-9fc1-1c4973f5519b"
+					alt="Cron by Vangware"
+				/>
+			</a>
+			<a href="https://npm.im/@vangware/window-open-promise">
+				<img
+					src="https://repository-images.githubusercontent.com/121594604/7e60b900-e658-11ea-9002-6c1805f86bf7"
+					alt="Window Open Promise by Vangware"
+				/>
+			</a>
+			<a
+				href="https://marketplace.visualstudio.com/items?itemName=vangware.dark-plus-material"
+			>
+				<img
+					src="https://repository-images.githubusercontent.com/74767682/448fb280-e658-11ea-806b-de9ddb0ef8f7"
+					alt="Dark+ Material Theme"
+				/>
+			</a>
+		</aside>
 	</body>
 </html>
