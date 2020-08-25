@@ -1,5 +1,5 @@
 # Vangware's Website
 
-![](https://vangware.com/images/logo.big.svg)
+![](https://i.imgur.com/PK5bjyS.png)
 
-Website with social links.
+Website with links to official profiles and projects.
