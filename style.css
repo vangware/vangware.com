@@ -9,6 +9,7 @@
 }
 
 html {
+	background-color: var(--color-brand);
 	font-size: 2vw;
 }
 
@@ -95,26 +96,6 @@ aside img {
 
 #shadow {
 	stroke: var(--color-logo-shadow);
-}
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--color-brand: #222;
-		--color-brand-secondary: #000;
-		--color-logo: #2b7;
-	}
-	aside a img {
-		filter: grayscale(1);
-		transform: scale3d(1, 1, 1);
-		transition: filter 0.2s ease-in-out, transform 0.2s ease-in-out;
-		will-change: filter, transform;
-	}
-
-	aside a:focus img,
-	aside a:hover img {
-		filter: grayscale(0);
-		transform: scale3d(1.1, 1.1, 1.1);
-	}
 }
 
 @media (max-width: 800px) {
