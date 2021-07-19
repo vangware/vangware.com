@@ -1,7 +1,7 @@
 {
   "name": "vangware.com",
   "description": "Vangware's Website",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": {
     "name": "Vangware",
     "url": "https://vangware.com"
@@ -10,12 +10,12 @@
     "url": "https://github.com/vangware/vangware.com/issues"
   },
   "devDependencies": {
-    "@types/prettier": "^2.3.0",
-    "@types/stylelint": "^13.13.0",
-    "@typescript-eslint/eslint-plugin": "^4.26.1",
-    "@typescript-eslint/parser": "^4.26.1",
-    "@vangware/base": "^4.7.4",
-    "eslint": "^7.28.0",
+    "@types/prettier": "^2.3.2",
+    "@types/stylelint": "^13.13.1",
+    "@typescript-eslint/eslint-plugin": "^4.28.3",
+    "@typescript-eslint/parser": "^4.28.3",
+    "@vangware/base": "^4.7.12",
+    "eslint": "^7.31.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-ban": "^1.5.2",
     "eslint-plugin-functional": "^3.2.1",
@@ -24,11 +24,12 @@
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "eslint-plugin-prettier": "^3.4.0",
     "live-server": "^1.2.1",
-    "prettier": "^2.3.1",
+    "prettier": "^2.3.2",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-order": "^4.1.0",
     "stylelint-prettier": "^1.2.0",
+    "typescript": "^4.3.5",
     "workbox-cli": "^6.1.5"
   },
   "homepage": "https://vangware.com",
